@@ -21,9 +21,31 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <div id="page" class="site">
 	<!--<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'meg-miller' ); ?></a>-->
 
+<header>     <!--Begin Page Header Section / Navigation!!!-->
+			<div class="full-width">
+				<div class="half-width">
+					<h1><?php bloginfo( 'name' ); ?></h1>
+					<h2><span>I'm Meg </span>&amp building beautiful<br> websites is my happy place.</h2>
+				</div>
+				<div class="half-width">
+					
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'meg-miller' ); ?></button>
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					</nav><!-- #site-navigation -->
+				</div>
+			</div>
+		</header>
+	
+	
+	
+	
+	
+	
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 			<?php
@@ -41,10 +63,7 @@
 			endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'meg-miller' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+		
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

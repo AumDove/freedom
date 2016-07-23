@@ -138,3 +138,29 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+ // Custom post types function
+
+ 
+ 
+ function create_custom_post_types() {
+// create a case study custom post type
+	register_post_type( 'your_info',
+		array(
+			'labels' => array(
+				'name' => __( 'Your Info' ),
+				'singular_name' => __( 'Your Info')
+			),
+			'public' => true,
+			'has_archive' => false,
+			'rewrite' => array ('slug' => 'your-info' ),
+		)
+	);
+
+
+ }
+ 
+ 
+ // Hook this custom post type function into the theme
+ 
+ add_action( 'init', 'create_custom_post_types');
