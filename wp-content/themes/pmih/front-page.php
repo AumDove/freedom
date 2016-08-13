@@ -12,12 +12,21 @@ get_header(); ?>
 <section class="home-page">
 	<div class="main-content">
 		<div class="content">
-			<?php while ( have_posts() ): the_post(); ?>
+			<h3><?php echo "About Me"; ?></h3>
+				<?php the_field('about_me'); ?>
+			<h3><?php echo "About Our Team"; ?></h3>
+				<?php the_field('about_our_team'); ?>
+			<h3><?php echo "Email"; ?></h3>
+				<?php the_field('email'); ?>
+			<h3><?php echo "facebook"; ?></h3>
+				<?php the_field('facebook'); ?>
+			<h3><?php echo "instagram"; ?></h3>
+				<?php the_field('instagram'); ?>
+			<h3><?php echo "youtube"; ?></h3>
+				<?php the_field('youtube'); ?>
 			
-				<h1><?php the_title(); ?></h1>
-				<?php the_content(); ?>
 				<a href="<?php the_field('landing_page_link'); ?>" target="_blank" class="btn">Get Started Now</a>
-			<?php endwhile; ?>
+			
 		</div>
 	</div>
 </section>
